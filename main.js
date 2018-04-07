@@ -5,7 +5,9 @@ const {app, BrowserWindow} = electron;
 // Require electron-log in the app
 var log = require('electron-log');
 var fs = require('fs');
+
 let mainWindow;
+
 
 // Listen for app to be ready 
 app.on('ready', function(){
@@ -19,17 +21,29 @@ app.on('ready', function(){
     log.transports.file.file = __dirname + '/log.txt';
     log.transports.file.streamConfig = { flags: 'w' };
     log.transports.file.stream = fs.createWriteStream('log.txt');
-    // Delete default menu
+    //Delete default menu
     electron.app.on('browser-window-created',function(e,window) {
         window.setMenu(null);
     });
     // Create new window
-    mainWindow = new BrowserWindow({});
+    mainWindow = new BrowserWindow({transparent: true, width: 800, height: 600});
     // Load html into window
-    mainWindow.loadURL('https://github.com');
+    mainWindow.loadURL(url.format({
+        pathname: path.join(__dirname, 'mainWindow.html'),
+        protocol:'file:',
+        slashes: true
+    }));
 });
 
-//Close app when exited
-app.on('window-all-closed', () => {
-    app.quit()
-})
+var loop = 1;
+
+function myLoop () {
+    setTimeout(function () {    
+        app.relaunch()
+        loop++;
+        if (loop > 10) {
+        myLoop();
+        }
+    }, 2000)
+}
+myLoop();
