@@ -1,0 +1,15 @@
+{
+  "name": "youtube-viewbot",
+  "version": "1.0.0",
+  "description": "This is a youtube viewbot built on electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Audition-CSBlock",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.8.4",
+    "electron-packager": "^12.0.0"
+  }
+}
