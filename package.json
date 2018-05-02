@@ -1,6 +1,6 @@
 {
   "name": "youtube-viewbot",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This is a youtube viewbot built on electron",
   "main": "main.js",
   "scripts": {
