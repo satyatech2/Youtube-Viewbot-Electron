@@ -1,0 +1,70 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\dotnet\;C:\Program Files\Gource\cmd;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files\nodejs\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Python27\Scripts;C:\metasploit-framework\bin\;C:\Users\Sacha\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code Insiders\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\Sacha\AppData\Local\GitHubDesktop\bin;C:\Users\Sacha\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Users\Sacha\AppData\Local\Yarn\bin;C:\Users\Sacha\AppData\Local\hyper\app-2.0.0\resources\bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.10.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "youtube-viewbot",
+    "version": "1.0.2",
+    "description": "This is a youtube viewbot built on electron",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron .",
+      "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+      "package-win": "electron-packager . Youtube-Viewbot --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.ProductName=\"Youtube-Viewbot\"",
+      "package-linux": "electron-packager . Youtube-Viewbot --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
+    },
+    "author": "Audition-CSBlock",
+    "license": "MIT",
+    "dependencies": {
+      "electron": "^1.8.4",
+      "electron-log": "^2.2.14",
+      "electron-packager": "^12.0.0"
+    },
+    "devDependencies": {
+      "hoek": "^4.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: C:\Users\Sacha\Desktop\GitHub\Youtube-Viewbot-Electron\node_modules\electron: Command failed.
+  Exit code: 3221225786
+  Command: C:\WINDOWS\system32\cmd.exe
+  Arguments: /d /s /c node install.js
+  Directory: C:\Users\Sacha\Desktop\GitHub\Youtube-Viewbot-Electron\node_modules\electron
+  Output:
+  Downloading electron-v1.8.6-win32-x64.zip
+  [>                                            ] 0.0% (0 B/s)
+  [1000D[0K[1A[1000D[0K[1A[1000D[0KDownloading electron-v1.8.6-win32-x64.zip
+  [>                                            ] 0.0% of 50.32 MB (0 B/s)
+  [1000D[0K[1A[1000D[0K[1A[1000D[0KDownloading electron-v1.8.6-win32-x64.zip
+  [>                                            ] 0.0% of 50.32 MB (16.36 kB/s)
+  [1000D[0K[1A[1000D[0K[1A[1000D[0KDownloading electron-v1.8.6-win32-x64.zip
+  [>                                            ] 0.0% of 50.32 MB (11.29 kB/s)
+  [1000D[0K[1A[1000D[0K[1A[1000D[0KDownloading electron-v1.8.6-win32-x64.zip
+  [>                                            ] 0.1% of 50.32 MB (6.34 kB/s)
+  ^C
+      at ProcessTermError.MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at new ProcessTermError (C:\Program Files (x86)\Yarn\lib\cli.js:226:113)
+      at ChildProcess.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)

@@ -44,15 +44,12 @@ app.on('ready', function () {
     }));
 });
 
+// The relauncher
 var loop = 1;
 
-function myLoop() {
-    setTimeout(function () {
-        app.relaunch()
-        loop++;
-        if (loop > 10) {
-            myLoop();
-        }
-    }, 2000)
-}
-myLoop();
+function relauncher() {
+    while (loop = 1) {
+        app.relaunch();
+        loop++
+    }
+relauncher();
