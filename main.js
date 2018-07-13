@@ -1,6 +1,8 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
+const globalShortcut = electron.globalShortcut
+var loop = 1
 const {
     app,
     BrowserWindow
@@ -13,7 +15,7 @@ let mainWindow;
 
 
 // Listen for app to be ready 
-app.on('ready', function () {
+app.on('ready', function appWindow() {
     // Logging
     log.error();
     log.debug();
@@ -42,14 +44,15 @@ app.on('ready', function () {
         protocol: 'file:',
         slashes: true
     }));
+    // The reloader
+    globalShortcut.register('f6', function loopStop() {
+        console.log('stopped the reloader')
+        var loop = 2
+    })
+    globalShortcut.register('f5', function loopStart() {
+        console.log('started the reloader')
+        while (loop = 1) {
+            mainWindow.reload()
+        }
+    })
 });
-
-// The relauncher
-var loop = 1;
-
-function relauncher() {
-    while (loop = 1) {
-        app.relaunch();
-        loop++
-    }
-relauncher();

@@ -12,11 +12,11 @@
   "author": "Audition-CSBlock",
   "license": "MIT",
   "dependencies": {
-    "electron": "^1.8.4",
     "electron-log": "^2.2.14",
     "electron-packager": "^12.0.0"
   },
   "devDependencies": {
+    "electron": "^1.8.7",
     "hoek": "^4.2.1"
   }
 }
