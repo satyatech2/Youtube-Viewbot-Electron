@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "electron": "^2.0.14",
-    "hoek": "^4.2.1"
+    "hoek": "^6.1.3"
   }
 }
